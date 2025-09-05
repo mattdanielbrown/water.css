@@ -33,7 +33,7 @@
   "homepage": "https://github.com/kognise/water.css",
   "devDependencies": {
     "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-env": "^7.28.3",
     "@changesets/cli": "^2.7.2",
     "autoprefixer": "^9.5.1",
     "browser-sync": "^2.26.3",
