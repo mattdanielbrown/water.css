@@ -10,7 +10,9 @@
     "lint:css": "stylelint src/**/*.css docs/style.css",
     "lint": "yarn lint:js --fix && yarn lint:css --fix",
     "accessibility": "yarn build && node accessibility.js",
-    "validate": "yarn lint:js && yarn lint:css && yarn accessibility"
+    "validate": "yarn lint:js && yarn lint:css && yarn accessibility",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -59,7 +61,7 @@
     "gulp-sizereport": "^1.2.1",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-terser": "^1.2.0",
-    "htmlnano": "^0.2.3",
+    "htmlnano": "^2.0.0",
     "husky": "^4.2.5",
     "pa11y": "^5.3.0",
     "postcss-color-mod-function": "^3.0.3",
@@ -76,5 +78,9 @@
   "files": [
     "out/*.css",
     "LICENSE.md"
-  ]
+  ],
+  "snyk": true,
+  "dependencies": {
+    "@snyk/protect": "latest"
+  }
 }
